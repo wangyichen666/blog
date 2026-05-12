@@ -9,9 +9,9 @@ media_folder: "assets/images"
 public_folder: "/assets/images"
 
 # 站点 URL 配置（部署后需要修改）
-site_url: https://your-site.netlify.app
-display_url: https://your-site.netlify.app
-logo_url: https://your-site.netlify.app/logo.svg
+site_url: https://pilotblog.netlify.app
+display_url: https://pilotblog.netlify.app
+logo_url: https://pilotblog.netlify.app/logo.svg
 
 # 内容集合
 collections:
