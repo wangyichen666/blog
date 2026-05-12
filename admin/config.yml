@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+# Media 存储位置
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# 站点 URL 配置（部署后需要修改）
+site_url: https://your-site.netlify.app
+display_url: https://your-site.netlify.app
+logo_url: https://your-site.netlify.app/logo.svg
+
+# 内容集合
+collections:
+  - name: "posts"
+    label: "文章"
+    label_singular: "文章"
+    folder: "_posts/"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "posts/{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "描述", name: "description", widget: "text", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "分类", name: "categories", widget: "list", required: false }
+      - { label: "图片", name: "image", widget: "image", required: false }
+
+  - name: "pages"
+    label: "页面"
+    label_singular: "页面"
+    folder: "/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "描述", name: "description", widget: "text", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }

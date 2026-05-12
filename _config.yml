@@ -1,0 +1,26 @@
+title: My Jekyll Blog
+email: admin@example.com
+description: A blog powered by Jekyll and Netlify CMS
+baseurl: ""
+url: ""
+github_username: yourgithub
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Collections
+collections:
+  posts:
+    title: Posts
+    output: true
+    permalink: /posts/:path/
+
+# Netlify CMS
+cms_source: "./admin"
+
+# Pagination
+paginate: 5
+paginate_path: /page/:num/
